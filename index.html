@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hi :)</title>
+<style>
+  html, body {
+    height: 100%;
+    margin: 0;
+    background: #fafafa;
+    font-family: -apple-system, system-ui, sans-serif;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .hi {
+    font-size: clamp(4rem, 18vw, 6rem);
+    color: #222;
+    line-height: 1;
+  }
+  .carita {
+    font-size: clamp(5rem, 22vw, 7rem);
+    color: #222;
+    line-height: 1;
+    animation: vaiven 4s ease-in-out infinite;
+  }
+  .carita::before {
+    content: "(:";
+    display: inline-block;
+    transform: rotate(-90deg);
+  }
+  @keyframes vaiven {
+    0%, 100% { translate: -10px 0; }
+    50%      { translate:  10px 0; }
+  }
+</style>
+</head>
+<body>
+  <div class="hi">Hi</div>
+  <div class="carita"></div>
+</body>
+</html>
